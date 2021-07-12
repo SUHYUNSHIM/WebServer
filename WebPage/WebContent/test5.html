@@ -6,21 +6,55 @@
 </head>
 <body>
 <!-- checkbox는 여러 개 선택이 가능, default 선택 -->
-<form action="hello1.jsp" method =get>
-메일 전송 여부를 결정하세요<br>
-	<input type="checkbox" name= "mailhow" checked>
-	<br><br>
+	<form action="hello1.jsp" method =get>
+	메일 전송 여부를 결정하세요<br>
+		<input type="checkbox" name= "mailhow" checked>
+		<br><br>
+		
+	좋아하는 운동은?<br><br>
+		<input type="checkbox" name="woondong1" value="soccer">축구<br>
+		<input type="checkbox" name="woondong1" value="tennis">테니스<br>
+		<input type="checkbox" name="woondong1" value="golf">골프<br>
+		<br><br>
+								<!--이름은 같고 value로 구분한다.-->
+	좋아하는 팀은?<br><br>
+		<input type="checkbox" name="woondong2" value="hanwha">이글스<br>
+		<input type="checkbox" name="woondong2" value="kiwoom">히어로즈<br>
+		<input type="checkbox" name="woondong2" value="kt">위즈<br>
+		<br><br>
+		
+	좋아하는 선수는?<br><br>
+		<input type="radio" name="athelete" value="jung">정은원<br>
+		<input type="radio" name="athelete" value="kim">김민우<br>
+		<input type="radio" name="athelete" value="kang">강재민<br>
+		<br><br>	
+		
+	선택한 이유 기술<br>
+	<textarea rows=10 cols=50>꼭 작성해 주십시오.</textarea>
+	<textarea rows=10 cols=50 onFocus="this.select()">꼭 작성해주십시오 </textarea>
 	
-좋아하는 운동은?<br><br>
-	<input type="checkbox" name="woondong1" value="soccer">축구<br>
-	<input type="checkbox" name="woondong1" value="tennis">테니스<br>
-	<input type="checkbox" name="woondong1" value="golf">골프<br>
 	<br><br>
-							<!--이름은 같고 value로 구분한다.-->
-좋아하는 팀은?<br><br>
-	<input type="checkbox" name="woondong2" value="hanwha">이글스<br>
-	<input type="checkbox" name="woondong2" value="kiwoom">히어로즈<br>
-	<input type="checkbox" name="woondong2" value="kt">위즈<br>
+	출발지 선택<br>
+	<select name ="select1">
+	<option value="대전 ">한화생명이글스파크<br>
+	<option value="인천 " selected>SSGLanders<br>
+	<option value ="창원 ">NC파크<br>
+	</select>
+	
 	<br><br>
+	여러 개 선택하기<br>
+	<select name="choice" size=3 multitple>
+		<option value="외야">중견수</option>
+		<option value ="내야">유격수</option>
+		<option value ="마운드" selected>투수 </option>
+		<option value ="홈">포수</option>
+		<option value ="관중석">관객</option>
+	</select><br>
+	
+	<br><br>
+		<input type="submit" value="가자 서버로">
+		<input type ="reset" value="안가네">
+	
+	</form>
 </body>
 </html>
