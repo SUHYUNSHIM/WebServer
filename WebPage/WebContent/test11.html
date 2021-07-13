@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	h1{
+		color:red;
+		text-align:center;
+		text-decoration:underline;
+	}
+		/*overline 윗줄, line-through 취소선*/
+
+	p{
+		color:blue; font-size:30pt;
+	}
+	
+	.redred {
+		color:red;
+	} /*클래스(.을 붙임, 자바 클래스와는 1도 갖지 않음)*/
+		/*class= redred가 붙어있는데 태그의 디자인은 이렇게*/
+		
+		/*id*/
+	#myid {
+		color:green;font:bold 20pt Serif,Sans-serif;
+	}
+	
+	/* font에서의 순서는 font-style font-size font-family,,, 순 */
+		/*id=myid 가 붙어있는 태그의 디자인은 이렇게*/
+	
+</style>
+</head>
+<body>
+	<!--div.redred  -->
+	<div class="redred">나는 무슨 색일까?</div>
+	
+	<!--div#myid  -->
+	<div id="myid">나는 id로 디자인하네</div> <!--글자 가운데 정렬  -->
+	<h1>난 red입니다.</h1>
+	<h3 style="color:violet;">난 보라색입니다.</h3>
+	<!--html에 직접 디자인한 css  -->
+	
+	<p> 나는 단락이고 크기는 30</p>
+	
+	<font color="brown">html로 디자인</font><br> <!--이건 html 디자인  -->
+	<h2 class="redred">.은 클래스여서 그래서 red이다.</h2> <!--class 사용, 사용시 .빼고 class="클래스이름"형식, class="redred"로 사용  -->
+	<div class="redred">이것도 red이다 </div>
+	
+	<span id="myid">#은 id이다. 크기는 20</span>
+	<!--id사용, 사용시 #빼고, id="id명" 형식, id="myid"형식으로 사용  -->
+	<!--(예) #myid{color:green; font-size:20pt}  -->
+	
+	</body>
+</html>
