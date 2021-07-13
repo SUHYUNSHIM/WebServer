@@ -5,11 +5,36 @@
 <title>Insert title here</title>
 <style>
 html,body{padding:0px;border:0px;}
-div{display:table;width:100%;}
+div{display:table;width:100%;} /*table parent 즉, <table> 정의
+								단, 보더에 대한 정의없으면 선은 없음*/
 header{
 	color:blue;
 	background-color:yellow;
 	padding:10px;
+}
+
+nav{					/*display:table-row;는 table의 <tr>*/
+	display:table-cell; /*table-cell은 table의 <td>로 결국 float:left 역할*/
+	color:red;
+	background-color:pink;
+	width:20%; /*좌측 20%차지*/
+}
+section{
+	display:table-cell;	/*위의 nav 옆에 <td> 역할, 즉, float:right 역할 */
+	color:yellow;
+	background-color:blue;
+	width:70%
+}
+aside{
+	display:table-cell; /*<td>로 등분 3번째 cell의 역할 */
+	color:red;
+	background-color:cyan;
+	width:10%
+}
+footer{
+	color:pink;
+	background-color:brown;
+	width:100%;
 }
 
 </style>
