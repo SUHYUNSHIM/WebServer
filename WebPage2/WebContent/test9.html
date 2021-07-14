@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>DOM</title>
+<script>
+function kaja(){//함수, 메소드 정의문
+	alert(document.form1.irum.value);
+	//이런 계층 구조만 있다. dom 이전 방식이다.
+	alert(document.span1) //undefined. 이런 경우가 자바스크립트에 없다.
+				//접근에 문제가 생김. document에는 span 태그를 찾아갈 수 있는 문법이 없다.
+}
+</script>
+</head>
+<body>
+	<form name= form1>
+	<input type ="text" name="irum"><br>
+	<input type ="button" value="눌러봐요" onclick="kaja();"><br>
+	</form>
+	
+	<!--위치를 설정해 주기 위해, 그룸 태그인 span을 사용  -->
+	<span name= span1 style="position:absolute;"> 
+	<img src="rabbit.png" border="0">
+	</span>
+</body>
+</html>
