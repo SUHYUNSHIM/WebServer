@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function kaja(){
+		document.write("안녕 자바스크립트4");
+		//웹페이지 로딩중에는 먼저 출력, But 다로딩된 후 에는 먼저 것을 다 지우고 출력 
+		alert("안녕 자바스크립트4 구만"); //우선순위
+		document.write("안녕 자바스크립트4-2");
+		alert("안녕 자바스크립트4-2구만")//우선순위		
+	}
+</script>
+
+</head>
+<body>
+나도 글자다1
+
+<input type="button" value="눌러봐-1" onclick="alert('나도 안녕')">
+<input type="button" value="눌러봐-2" onclick="kaja();">
+ 나도 글자다2
+</body>
+</html>

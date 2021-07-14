@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<!--회원 번호 2자리를 입력받아, 12이상 입력되면 "초록반으로 가세요"라는 메시지창 출력
+	10이상이면 노랑반, 다른 나이의 어린이면 파랑반으로 가세요 를 출력하는 자바스크립트 프로그램을 작성하시오. -->
+
+</head>
+<body>
+	
+<script>
+	var num2 //여기는 전역변수, var 함수 밖에 선언하면 전역변수 
+	num2 = prompt("회원번호 앞 2자리는",12)
+	//alert(typeof num2) //typeof는 연산자 -->"5"
+	//alert(typeof 5) //number
+	alert(typeof num2) //string이 출력된다.
+	if (num2>="12")
+		alert("초록반으로 가세요")
+	else if(num2>=10){
+		alert("노랑반으로 가세요")
+	}
+	else{
+		alert("노랑반으로 가세요")
+	}
+	
+	prompt("회원번호 2자리를 입력 ")
+</script>
+</body>
+</html>
