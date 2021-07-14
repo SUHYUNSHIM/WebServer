@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+	window.alert("안녕 자바스크립트") //객체.메소드
+	//alert("안녕 자바스크립트") //메시지창
+	alert("윈도우 생략했네")
+	
+	document.write("글씨쓰는 부분")//객체.메소드
+	//write("글씨쓰는 부분") x. 생략 불가능.
+	
+	alert("윈도우 생략했네"); alert("윈도우 생략했네")
+	alert("안녕 자바스크립트"+"반갑네");
+	alert("안녕 자바스크립트","반갑네");
+	//x 실행은 되는데 반갑네 글자는 안나옴.
+	
+	document.write("글씨쓰는 부분-2")//객체.메소드
+	document.write("<h1>엄청 덥다</h1>")
+	var aa =30;
+	var bb = 56.7;
+	var cc = "suhyun";
+	document.write(aa+", "+bb+" ,"+cc);
+	
+	//window.prompt()
+	//지역변수
+	var name1 =prompt("너 이름이 뭐니?","김도영")
+	name1 =prompt("너 이름이 뭐니?","김도영")
+	document.write("이름이 ", name1,"이군요"+"<br>")
+	document.write("이름이 "+"\t"+ name1+"\t"+"이군요"+"<br>")
+	//alert(,,)
+	
+	//전역변수
+	name =prompt("너 이름이 뭐니?","김도영")
+	name =prompt("너 이름이 뭐니?","김도영")
+	document.write("이름이 ", name,"이군요"+"<br>")
+	document.write("이름이 "+"\t"+ name+"\t"+"이군요"+"<br>")
+	//alert(,,)
+	
+	var oneul1= new Date() /*내장 객체*/
+	document.write(oneul1+"날짜만 출력하면 "+oneul1.getDate())
+	
+	</script>
+</body>
+</html>

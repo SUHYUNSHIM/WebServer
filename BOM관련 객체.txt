@@ -1,0 +1,27 @@
+window 객체 -- 브라우저 창 객체, BOM 최상위 객체 
+속성: closed, innerHieght, innerWidth, length,outerHeight, outerWidth, pageXOffset,pageYOffset
+,parent, self, top
+메서드: open(),close(), moveBy(x,y),moveTo(x,y), resizeBy(w,h),resizeTo(w,h),scrollBy(x,y),scrollTo(x,y)
+
+-------------------------------
+location -주소 표시줄 객체
+속성 : hash, host, hostname, href, origin, pathname, port,protocol, search, length
+메서드: assign(url), replace(url),reload()
+--------------------------------
+screen -운영체제 화면 객체
+screen 객체는 자바스크립트가 명령을 줄 수 는 없기 때무에 속성만 갖고 있다.
+속성: availHeight, availWidth, colorDepth,height,pixelDepth,width
+--------------------------------
+history - 방문기록 객체
+속성: length
+메서드 :back() 현재 브라우저 창의 기록 목록 중  이전 목록으로 보내는 메서드
+           forward() 현재 브라우저 창의 기록 목록 중 다음 목록으로 보내느 메서드
+           go(n): 현재 브라우저 창의 기록 목록 중 매개변수 숫자를 이용하여 그 목록으로 보내는 메서드
+--------------------------------
+navigator - 브라우저 정보 객체
+속성: appCodeName,appName,appVersion,cookieEnabled,geolocation,language,onLine,platform,product
+메서드: javaEnabled() 브라우저에서 java를 사용할 수 있는지 불표현식으로 반환.
+document - 문서객체, body 태그 부분을 의미
+
+
+
