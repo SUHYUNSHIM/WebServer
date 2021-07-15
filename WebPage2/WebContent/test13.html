@@ -3,8 +3,31 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+	<script>
+		function kaja(){
+			alert(document.getElementById("aa").innerText);
+			alert(document.getElementById("aa").innerHTML);
+			alert(document.getElementById("aa").outerText);
+			alert(document.getElementById("aa").outerHTML);
+			alert(document.getElementById("aa").textContent);
+		}
+	</script>
 </head>
 <body>
+<div><div>
+<div><div>
+	<script>
+	alert("윈도우 화면 크기:"+window.screen.width+"  "+screen.height)
+			//BOM 사용: 윈도우 객체.속성
+	</script>
+	<table id="aa">
+	<tr>
+	<th>love</th>
+	</tr>
+	<tr>
+		<td><h1 onClick="kaja()">I love you</h1></td>
+	</tr>
+	</table>
 
 </body>
 </html>
