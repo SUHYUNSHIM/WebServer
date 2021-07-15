@@ -1,0 +1,29 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+function ebbu(){
+	alert("oh yeah!");
+}
+</script>
+<script>
+	document.onclick=ebbu; //객체.속성 = 값 -> 객체.이벤트 = 이벤트처리함수 
+</script>
+<script>
+	function kaja(){
+		alert("ye~~");
+	}
+</script>
+</head>
+<body>
+	<form name="form1">
+	<input type ="button" name="b1" value="눌러봐">
+	</form>
+	<script> /*객체.동적 메소드() */
+		document.form1.b1.addEventListener('click',kaja,true)
+		/*계층적 */
+		</script>	
+</body>
+</html>
