@@ -13,13 +13,20 @@
 	function ebbu(){
 		alert("예쁘네~")
 	}
+	  //event stop 
+	function kajaCancel(){
+		if(event.stopPropagation)
+			event.stopPropagation();
+		else
+			event.cancelBubble = true;
+	}
 </script>
 </head>
 <body>
 <script>
-	//객체.동적메소드(이벤트,함수,true) 함수 선언 후 바로 내용 썼다. //true는 capture의 지정작업이다.
+	/* //객체.동적메소드(이벤트,함수,true) 함수 선언 후 바로 내용 썼다. //true는 capture의 지정작업이다.
 	document.addEventListener('click',function kocheon(){
-									alert("코팅 천재! capture")	},true);		
+									alert("코팅 천재! capture")	},true);	 */	
 	document.onclick =ebbu //객체.이벤트 =이번트처리함수
 	//document.onclick =ebbu()
 </script>
@@ -27,7 +34,7 @@
 	나 어때!
 </div>
 <div onclick="mut()">
-	<span onclick="sa()">
+	<span onclick="sa();kajaCancel();">
 		신상 입은 나 어때~~
 	</span>
 </div>	
