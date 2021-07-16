@@ -3,13 +3,24 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<script>
+	window.onload=function(){
+		setTimeout("kaja()",5000)
+	}
+	
+	function kaja(){
+		//window.location="http://www.naver.com"; --> window 객체가 갖고 있는 속성 location. 뒤로 가기 버튼 존재
+		//location.href="http://www.naver.com"; //객체명이 location. 뒤로 가기 버튼 존재
+		location.replace("http://www.naver.com") //객체.메소드 --> reload 새로 올리는 것. 전의 페이지를 기억하지 못하기 때문에, 전 페이지로 돌아가는
+												 //버튼이 나오지 않는 것이다. 
+	}
+
+</script>
 </head>
 <body>
 <h1>
-우리 홈피가 이사했다는<br>
+우리 홈피가 이사했어<br>
 조금 있어봐 naver 홈페이지로 간다
 </h1>
-
-
 </body>
 </html>
