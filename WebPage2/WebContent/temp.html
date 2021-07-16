@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<style>
+        /*큰 메뉴 디자인*/
+                /*pointer 가 손커서, old 방식 hand*/
+        .menu1{cursor:pointer; color:blue;
+                         background-color:pink; font-size:20pt;}
+                 /*소메뉴 디자인*/                
+         .menu2{color:red; background-color:yellow; font-size:10pt;}
+</style>
+
+<script>  /* bada 는 documnet.getElementById('somenu1')를 받음*/
+function kaja(bada) { //일단 소제목은 다 숨긴다 -> 그다음 내가 누른 마지막 소제목만 나오게
+        
+        var somenu1=document.getElementById('somenu1')
+        somenu1.style.display="none" //객체.속성=값//css
+        
+        var somenu2=document.getElementById('somenu2')
+        somenu2.style.display="none" //객체.속성=값//css
+
+        var somenu3=document.getElementById('somenu3')
+        somenu3.style.display="none" //객체.속성=값//css
+        
+        bada.style.display="block"//display:block
+                                //내가 누른 너만 제목이 나올 수 있도록.
+}
+
+        
+</script>
+
+
+</head>
+<body>
+<br><br>
+        <!-- 메뉴 1 --> <!-- toggle 방식메뉴 -->
+        <div class ="menu1" id=bigmenu1" onclick="kaja(document.getElementById('somenu1'))">
+                CEO                                                                    <!-- dom : 접근,동적 -->
+        </div>
+
+<!-- display:none - 있는데 숨기겠다 display:block -숨긴거 보이게 -->
+        <div class="menu2" id ="somenu1" style="display:none">   <!-- style= 문법은 css가 태그 형식으로 사용될때 쓰는 문법 -->
+                <ul>
+        <!-- <li><a href="http://www.naver.com">CEO소개</a> -->
+                        <li><a href = "#">CEO소개</a>
+                        <li><a href = "#">CEO인사말</a>
+                </ul>
+        </div>
+        
+        <!-- 메뉴2 -->
+        <div class="menu1" id="bigmenu2" onclick="kaja(document.getElementById('somenu2'))">
+        회사소개및 연혁                                <!-- DOM -->
+        </div>
+        
+        <div class="menu2" id= "somenu2" style="display:none">
+                <ul>                                         <!-- hidden, 이것 반대는
+                                                                        display:block(show) -->
+                        <li><a href="#">회사소개</a>
+                        <li><a href="#">회사연혁</a>                
+                
+                </ul>
+        </div>
+        <!-- 메뉴3 -->
+        <div class="menu1" id="bigmenu3" onclick="kaja(document.getElementById('somenu3'))">
+        주요사업                                <!-- DOM -->
+        </div>
+        
+        <div class="menu2" id= "somenu3" style="display:none">
+                <ul>                                         <!-- hidden, 이것 반대는
+                                                                        display:block(show) -->
+                        <li><a href="#">AI</a>
+                        <li><a href="#">서버</a>                
+                
+                </ul>
+        </div>
+        
+        
+        
+</body>
+</html>
+
+
+
+
+
+
+
