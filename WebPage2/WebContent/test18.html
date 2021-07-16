@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+//객체.속성 = 값 객체.이벤트= 이벤트 핸들러
+window.onload =function(){kaja();}
+function kaja(){
+	//쿠키형식
+	//큐기명 =쿠키값;
+	//-1 음수 이런 게 없다.
+	//expires = 유효기간
+	if(document.cookie.indexOf("annaeCookie = kongji1")==-1){
+		window.open("cookieWin1.html","cookieWin2",
+				"width=370, height=300, top=20,left=350,location=no")
+	}	//window.open(인자1,인자2,인자3)	
+}	//alert("쿠키한번보자"+document.cookie) -> 쿠키 있는 것 모두 확인 가능하다.
+</script>
+</head>
+<body style="background-color:cyan;">
+<h3>popup창 열자</h3>
+	<pre>
+		여기는 본문이 있는 곳으로
+		본문은 말 그대로 본문이다
+	</pre>
+		
+</body>
+</html>
