@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	/*큰 메뉴 디자인*/
+	/*pointer가 손 커서, old 방식 hand  */
+	.menu1{
+		cursor:pointer; 
+		color:blue;
+		background-color:pink; 
+		font-size:20pt;
+	}
+	.menu2{
+		color:red;
+		background-color:yellow;
+		font-size:10pt;
+	}
+</style>
+<script>
+function kaja(bada){
+	/*bada는 document.getElementById('somenu1')를 받음 */
+	if(bada.style.display=="none")//소메뉴가 숨어있어
+		bada.style.display="block"
+	else/*안숨어 있다면 숨긴다.  */
+		bada.style.display ="none"
+	
+}
+</script>
+
+</head>
+<body>
+	<br><br>
+	<!--메뉴1  --> <!--toggle 방식의 메뉴  -->
+	 <div class="menu1" id="bigmenu1"
+	 		onclick="kaja(document.getElementById('somenu1'))">
+	 								<!--접근한다  -->
+	 		CEO
+	 </div>
+	 
+	 <!--display: none - 있는데 숨기겠다.        display:block- 숨긴 것이 보이게 -->
+	 <div class="menu2" id="somenu1" style="display:none">
+	 	<ul>
+	 	<!--<li><a href="http://www.naver.com">CEO소개 </a> -->
+	 	 <li><a href="#">CEO소개</a>
+	 	 <li><a href="#">CEO인삿말</a>
+	 	 </ul>
+	 </div>
+	 
+	 <!--메뉴2  -->
+	 <div class="menu1" id="bigmenu2"
+	 	   onclick="kaja(document.getElementById('somenu2'))">
+	 회사 소개 및 연혁
+	 </div>
+	 <div class="menu2" id="somenu2" style="display:none">
+	 	<ul>
+	 		<li><a href="#">회사소개</a>
+	 		<li><a href="#">회사연혁</a>
+	 	</ul>
+	 </div>
+	 <!--메뉴3  -->
+	 <div class ="menu1" id="bigmenu2"
+	 		onclick="kaja(document.getElementById('somenu3'))">
+	 주요사업
+	 </div>
+	 <div class="menu2" id="somenu3" style="display:none">
+	 	<ul>
+	 		<li><a href="#">AI</a>
+	 		<li><a href="#">서버</a>
+	 	</ul>
+	 </div>
+</body>
+</html>
