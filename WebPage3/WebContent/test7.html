@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<h1>수를 클릭으로 곱하지 말입니다</h1>
+	<h2>앞의 수 클릭</h2><h3 id="num1">15</h3>
+	<h2>뒤의 수 클릭</h2><h3 id="num2">10</h3>
+	<h2>답 클릭</h2><h3 id="result">0</h3>
+	
+<script>
+$(function(){
+	var num11, num22
+	$("#num1").click(function(){
+		num11 = $(this).text() //getText()
+	});
+	$("#num2").click(function(){
+		num22 =$(this).text()
+	});
+	$("#result").click(function(){
+		var result =num11 * num22
+		$(this).text(result); //setText()의 개념.
+	});
+});
+</script>
+</body>
+</html>
