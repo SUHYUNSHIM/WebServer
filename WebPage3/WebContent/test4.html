@@ -6,15 +6,20 @@
 <script src ="//dapi.kakao.com/v2/maps/sdk.js?appkey=621c6292067049222881c8e3738c79e4"></script>
 <script>
 	window.onload =function(){
-		var joongang1 = new daum.maps.LatLng(37.512612, 126.926391);
+		var markerPosition = new daum.maps.LatLng(37.512612, 126.926391);
 		//해당 위도, 경도를 지도의 중앙으로 위치하기 위한 것
 		var mapDesign1 = {
 				zoom:15,
-				center:joongang1,
+				center:markerPosition,
 				mapTypeId: daum.maps.MapTypeId.ROADMAP
 				//mapTypeId: daum.maps.MapTypeId.HYBRID
 		};
 		var map = new daum.maps.Map(document.getElementById("jido1"),mapDesign1);
+		//마커를 생성한다. 카카오 https://apis.map.kakao.com/web/sample/basicMarker/ 참조
+		var marker = new daum.maps.Marker({
+			position:markerPosition
+		});
+		marker.setMap(map);
 	}
 </script>	
 </head>
