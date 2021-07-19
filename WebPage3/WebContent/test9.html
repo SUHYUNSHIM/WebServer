@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<div id="div1"></div>
+	<div id="div2">
+		<ul>
+			<li id="li3">바보</li>
+			<li id="li4">온달</li>
+			<ul>
+				<li id="li5">멋지다</li>
+			</ul>
+		</ul>
+	</div>
+<script>
+$(function(){
+	$("div").filter("#div1").text("바보 온달의 러브라인!");	 //div 중에서 div1을 찾아내서, set innerHTML
+	//.다음에 이어쓰는 것. chaining 기법.
+})
+</script>
+</body>
+</html>
