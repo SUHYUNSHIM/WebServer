@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+//객체.속성 =값 -> 
+//객체.이벤트 = 이벤트 핸들러(handler)
+//웹 페이지가 로딩될 때 아래의 영역을 수행한다. 
+//<body onload ="kaja();">
+//스크립트만 사용하기 위해, 태그를 쓰지 않기 위해 아래와 같이 onload를 사용하였다.
+window.onload = function(){
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(kajaWichi1) //현재 위치
+		//navigator 객체 - 브라우저에 대한 정보 등을 알아낸다. 
+	}
+}
+//현재 위치
+function kajaWichi1(wichi1){ //coords: 위치 객체
+	var wido1 = wichi1.coords.latitude //위도
+	var kyungdo1 =wichi1.coords.longitude  //경도
+	alert("위도는"+wido1+" 경도는"+kyungdo1)
+}
+</script>
+</head>
+<body>
+<!--지도  -->
+	<h1>나의 위치</h1>
+	<h3>위도와 경도를 알아보자 </h3>
+	<h3>잘 나오는군</h3>
+</body>
+</html>
