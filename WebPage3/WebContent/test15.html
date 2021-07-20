@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<h1>members</h1>
+	<img src="images/mark.jpg" id= mem1/>
+	<img src="images/haechan.jpg" id=mem2/>
+	<img src="images/jisung.jpg" id=mem3/>
+<script>
+$(function(){
+	$("img").css("width",100);
+	$("img").css("height",100);
+	
+	//setInterval(arg1.3000) 계속 반복
+	setInterval(function(){
+		$("img").first().appendTo("body");		
+		},3000); //3초 간격
+	});
+</script>
+</body>
+</html>
