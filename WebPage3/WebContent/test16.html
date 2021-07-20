@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+function nawa(){
+	var krim = document.createElement("img");
+	//<img
+	krim.setAttribute("src","images/bear.png");
+	//<img src= "hc.gif"
+	krim.setAttribute("id","hchc");
+	//<img src="hc.gif" id="hchc"
+	document.form1.appendChild(krim);
+}
+function soomja(){
+	if(document.getElementById("hchc")) //접근. node가 있는 경우에만 
+		document.getElementById("hchc").parentNode.removeChild(document.getElementById("hchc"))
+	//부모 node는 document.
+}
+</script>
+</head>
+<body>
+<h1>이것은 javascript로 하는 것이다.</h1><br>
+<form name="form1">
+<img src="images/read.png" onclick="nawa()">
+<img src="images/bear.png" onclick="soomja()">
+<!--자바스크립트- 동적생성  -->
+</body>
+</html>
