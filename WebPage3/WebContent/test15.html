@@ -16,10 +16,20 @@ $(function(){
 	$("img").css("height",100);
 	
 	//setInterval(arg1.3000) 계속 반복
-	setInterval(function(){
+	/* setInterval(function(){
 		$("img").first().appendTo("body");		
 		},3000); //3초 간격
+	 */
+	 setInterval(function(){
+		 $("<img>")
+		 .attr("src","images/mark.jpg").css("width",100)
+		 .attr("src","images/mark.jpg").css("height",100)
+		 //속성 넣기. 
+		 //
+		 .attr("id","foxfox").appendTo("body");
+	 },3000);
 	});
+	
 </script>
 </body>
 </html>
