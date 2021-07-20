@@ -3,6 +3,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>m
 </head>
 <body>
 	<h1>맛집메뉴</h1>
@@ -22,10 +23,18 @@
 	</div>
 	<div id=d5>
 		<ul class=ul5>
-			<li id=11>회덮밥</li>
-			<li id=22>냉면</li>
-			<li id=33>왕만두</li>
+			<li id=100>회덮밥</li>
+			<li id=200>냉면</li>
+			<li id=300>왕만두</li>
 		</ul>
-	</div>	
+	</div>
+	
+	<script>
+	$(function(){
+		$('li').each(function(index1,content1){
+			$(this).css('color','blue');
+		});
+	});
+	</script>
 </body>
 </html>
