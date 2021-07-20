@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<h1>책</h1>
+	<div class="book">
+		<p>책 제목</p>
+		
+		<ul class="book1">
+			<li>인생</li>
+			<li>행복</li>
+			<li>즐거움</li>
+		</ul>
+	</div>
+
+<script>
+alert($(".book1 li:first").text()) //getter
+alert($(".book1 li:first-child").text())
+
+alert($(".book1 li:nth-child(1)").text()); //홀수 자식 요소. 1부터 센다
+alert($(".book1 li:eq(0)").text()); //0번째로 일치하는 요소
+alert($(".book1 li:lt(1)").text()); //1번째 요소 이전의 요소. 0부터 시작 . less than
+
+</script>
+</body>
+</html>
