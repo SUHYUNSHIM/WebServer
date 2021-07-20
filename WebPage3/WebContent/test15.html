@@ -21,12 +21,14 @@ $(function(){
 		},3000); //3초 간격
 	 */
 	 setInterval(function(){
-		 $("<img>")
+		 /* $("<img>")
 		 .attr("src","images/mark.jpg").css("width",100)
 		 .attr("src","images/mark.jpg").css("height",100)
 		 //속성 넣기. 
 		 //
-		 .attr("id","foxfox").appendTo("body");
+		 .attr("id","foxfox").appendTo("body"); */
+		 
+		 $("img:first").remove();
 	 },3000);
 	});
 	
