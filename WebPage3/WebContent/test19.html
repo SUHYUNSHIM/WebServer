@@ -4,20 +4,26 @@
 <meta charset="EUC-KR">
 <script src="js/jquery-3.3.1.js"></script>
 <script>
-$(function(){
-	var urlArray1=[
+$(function(){ //Array()
+	var urlArray1=[ //name:value
 		{key:'네이버~~',value:'http://www.naver.com/'},
 		{key:'redsunny',value:'http://blog.naver.com/i2krs/'}			
 	]
 	//var spp =[1,2,3,4];
 	//메뉴 2개를 화면에 출력하는 작업이 필요
+	//$.each(인자1(배열),function(인자2,인자3){		
+	//})
 	
-	$.each(urlArray1,function(key1,kab1){
+	
+	$.each(urlArray1,function(key1,kab1){ //for( in )
 		var str1="";
 		str1+='<a href="'+kab1.value+'">'
 			+'<h1>'+kab1.key+'</h1></a>'+'<br>';
+		//<a href="http//~주소/">
+		//
+		//여기까지 a tag 만들어짐
 		document.body.innerHTML +=str1;
-		
+				//body 태그 공간에 쓴다.
 	});	
 });
 </script>
