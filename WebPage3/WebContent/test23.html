@@ -27,7 +27,8 @@ document.write("\n"); //line- skip
 //로직이 간단해진다.
 
 	$(function(){
-		$("#lovelinename").autocomplete(loveline);
+		/* $("#lovelinename").autocomplete(loveline); */
+		$("#lovelinename").autocomplete(loveline,{matchContains:true});
 	});
 </script>
 <form>
