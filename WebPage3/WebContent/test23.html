@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.autocomplete.js"></script>
+<script> //배열의 초기치
+var loveline =["babo","ondal","kongjoo","cinderella",
+				"choonhyang","leodoryung",
+				"바보","온달","공주","신데렐라","춘향","이도령",
+				"바다","온도","축구공","신발","향단이","도자기"];
+			//배열의 다른 방법은 Array()
+
+</script>
+</head>
+<body>
+<script>
+//(1) javascript로 출력해본다면
+for (var i=0;i<loveline.length;i++){
+	document.write(loveline[i]+"\t"); //배열이므로
+}
+document.write("\n"); //line- skip
+</script>
+<script>
+//(2)검색엔진(suggest) 형태로 jQuery로 출력
+//로직이 간단해진다.
+
+	$(function(){
+		$("#lovelinename").autocomplete(loveline);
+	});
+</script>
+<form>
+러브라인 이름:
+<input type="text" name="lline" id="lovelinename"/>
+</form>
+</body>
+</html>

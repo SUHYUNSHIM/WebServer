@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<h1>여기에 들어오고 나가는 것은 hover로</h1>
+<h2>mouse over야?</h2>
+<h3>나는 어디에</h3>
+
+<script>
+/* <body oncload=" " , window.oncload= */
+$(function(){
+	$("h1").hover(function(){
+		$(this).css("background","yellow");	
+		//mouse enter , 드래그와는 다르다.
+	}, function(){
+		$(this).css("background","pink");
+		//mouseleave 
+	});
+	
+	$("h2").mouseover(function(){
+		$(this).css("color","red");
+	});
+	$("h2").mouseout(function(){ //mouseover의 반대
+		$(this).css("color","black");
+	});
+	
+	$("h3").click(function(){
+		$(this).remove(); //삭제됨
+	});
+	
+});
+</script>
+</body>
+</html>
