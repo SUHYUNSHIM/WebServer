@@ -21,6 +21,15 @@ function getXHR(){ //xhr 함수, 통신객체 생성하기.
 	}
 }//getXHR - end
 
+function serverKaja(){
+	xhr1 =getXHR();
+	xhr1.onreadystatechange = callback1;
+	xhr1.open("get","kajaParam.jsp?name=suhyun",true);
+	
+	xhr1.send(null);
+}
+
+
 function kajaServer(){ //서버로 가는 함수 
 	xhr1 = getXHR(); //new XHR, xhr 객체 생성됨. 메소드 호출 
 	xhr1.onreadystatechange = callback1; //callback. 다시 호출한다.
