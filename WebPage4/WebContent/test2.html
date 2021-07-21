@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+function kaja(){
+	$.ajax({
+		url:"kaja.jsp",
+		data:{
+			irum: "hong",
+			na2 :35			
+		},
+		dataType :"text",
+		type:"get",
+		success : function(result1){ //json 아무 인자나 넣는다.
+			alert("응답받는 다" +result1);
+		},
+		error:function(xhr1,status){
+			alert("에러상태 : "+"\t"+xhr1.status);
+		}
+	});
+}//kaja()-end
+</script>
+
+
+</head>
+<body>
+<h2>Ajax-jQuery</h2>
+<input type="button" value="가자 서버로" onclick="kaja()">
+
+</body>
+</html>

@@ -3,7 +3,6 @@
 <head>
 <meta charset="EUC-KR">
 <title>ajax kaja</title>
-
 <script>
 //javascript -> jQuery,Ajax --> jQueryAjax
 var xhrl =null;
@@ -21,21 +20,20 @@ function getXHR(){ //xhr 함수, 통신객체 생성하기.
 	}
 }//getXHR - end
 
-function serverKaja(){
-	xhr1 =getXHR();
-	xhr1.onreadystatechange = callback1;
-	xhr1.open("get","kajaParam.jsp?name=suhyun",true);
-	
-	xhr1.send(null);
-}
-
-
 function kajaServer(){ //서버로 가는 함수 
 	xhr1 = getXHR(); //new XHR, xhr 객체 생성됨. 메소드 호출 
 	xhr1.onreadystatechange = callback1; //callback. 다시 호출한다.
 	xhr1.open("get","kaja.jsp",true); //비동기 
 	xhr1.send(null);	
 }
+
+function serverKaja(){
+	xhr1 = getXHR();
+	xhr1.onreadystatechange = callback1;
+	xhr1.open("get","kajaParam.jsp?name=suhyun",true);	
+	xhr1.send(null);
+}
+
 
 function callback1(){
 	var ta =document.getElementById("ta"); //textarea 접근
@@ -60,7 +58,6 @@ function callback1(){
 			ta.value += xhr1.status+"\t"+xhr1.statusText+"\n";
 		}
 		break;
-
 	}
 }
 
@@ -75,6 +72,8 @@ function kajaClear(){
 <br>
 <textarea rows="20" cols="100" id="ta"></textarea>
 <br>
+
+<input type="button" value="서버로 가자" onclick="serverKaja()">
 <input type="button" value="서버로 가자" onclick="kajaServer()">
 <input type="button" value="초기화" onclick="kajaClear()">
 </body>
