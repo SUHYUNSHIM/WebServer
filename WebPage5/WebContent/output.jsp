@@ -7,7 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<% 
 	String sangValue =request.getParameter("product");
 	String cntValue = request.getParameter("cnt");
+	%>
 </body>
 </html>
