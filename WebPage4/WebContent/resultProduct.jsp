@@ -27,5 +27,31 @@ for(String p : products){ %>
 	<%=p%><br>
 <%}%>
 <%=pay %> 이군요 <br>
+
+
+<h2>구입내역</h2>
+<!-- value 값의 역할: value 값으로 구분 및 서버로 넘어가는 값이 value 값 -->
+<table border="2 width="700>
+	<tr><td>제품 종류번호 및 제목</td>
+		<td> <%
+			if(jong1 !=null){
+				out.println(jong1); //클라이언트로 전송
+			}
+		%></td></tr>
+	<tr><td>제품선택</td>
+		<td><%
+			if(products !=null){
+				for(int j=0;j<products.length;j++)
+					out.println(products[j]+"<br>");
+			}%> </td></tr>
+			
+	<tr><td>구입 방법</td>
+		<td><%
+			if(pay !=null){
+				out.println(pay);
+			}%> </td></tr>
+	<tr><td colspan =3>다시 구입하려면	
+		<a href="selectProduct.jsp">여기</a>를 누르세요</td></tr>	
+</table>	
 </body>
 </html>
