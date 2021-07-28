@@ -11,7 +11,9 @@
 <body>    <!-- 나는 100_output.jsp -->
 <%
 
-                  
+     String sangValue = request.getParameter("samgpum"); //select이름
+     String cntValue= request.getParameter("cnt");
+     
 
 	         
 	
