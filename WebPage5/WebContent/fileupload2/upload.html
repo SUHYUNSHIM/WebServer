@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>file upload</h1>
+<form action="uploadserver.jsp" method="post" enctype="multipart/form-data">
+	이름:<input type="text" name="irum1"><br>
+	파일들<input type="file" name="file1[]" multiple/>
+	
+	<input type="submit" value="가자업로드로"><br>
+	<input type="reset" value="취소">
+</form>
+</body>
+</html>
