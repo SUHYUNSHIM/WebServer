@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-    
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,31 +11,18 @@
 
      String sangValue = request.getParameter("samgpum"); //select이름
      String cntValue= request.getParameter("cnt");
-     
-
-	         
-	
-	
-	
-	
-	
-	         
+        
 	 //ArrayList 도 가능하나요????? OK 
 	/* 세션 속성명의 값을 읽어서  종류가 3개니까 세션도 3개 */
 	Object obj1 = session.getAttribute("cnts1");/* 가방개수 */
 	Object obj2 = session.getAttribute("cnts2");/* 구두개수 */
 	Object obj3 = session.getAttribute("cnts3");/* 넥타이개수 */
-	
-	
+
 	
 	
 	//처음인가 ? 아니면 구두에 대한 전 의 것 갯수가 들어있는가? 
 			//(처음이 아니면  갯수 계산준비를 시작) 
-		         
-			
-			
-			
-	int cnt1 = 0, cnt2 = 0, cnt3 = 0, cnt = 0;
+ 	int cnt1 = 0, cnt2 = 0, cnt3 = 0, cnt = 0;
 	
 	if(obj1 !=null){ 
 		/* 처음이면(session 없으면 obj1은 null) 아무것도 안함 (다음으로 감) */
@@ -51,11 +36,7 @@
 	if(obj3 !=null){
 		cnt3 = (Integer)obj3;
 	}
-	
 
-	
-	
-	
 	
 	//분류작업 
 			//가방 ? 구두? 넥타이?   , 각각의 갯수 
@@ -74,14 +55,6 @@
 	if("tie".equals(sangValue)){
 		cnt3 += cnt; //넥타이 10개 선택시 여기에 10개들어감 
 	}
-		
-	
-	
-	
-	
-	
-	
-	
 	
 	/* 드디어 여기서  세션에 제대로 된 속성값 저장 */
 	session.setAttribute("cnts1", cnt1); // 가방 5개  //bag
@@ -89,11 +62,6 @@
 	session.setAttribute("cnts3", cnt3);//없어 0  //tie 
 	 
 %>
-
-
-
-
-
 
 	<h2>현재 장바구니 내역</h2>
 	<hr>
