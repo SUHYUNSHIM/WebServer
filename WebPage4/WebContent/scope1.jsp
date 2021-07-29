@@ -8,6 +8,7 @@
 </head>
 <body>
 <%
+//scope.历厘皋家靛("加己疙","加己蔼")
 pageContext.setAttribute("page1","pagelove");
 request.setAttribute("req1","resolve");
 session.setAttribute("ses1", "seslove");
