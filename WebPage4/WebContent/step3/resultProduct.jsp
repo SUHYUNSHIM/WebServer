@@ -43,6 +43,7 @@ for(String p : products){ %>
 	<tr><td>제품선택</td>
 		<td><%
 			if(products !=null){
+				//두 개만 체크를 했다면 배열도 2개만 잡히고 넘어온 값도 2개만 넘어온다.
 				for(int j=0;j<products.length;j++)
 					out.println(products[j]+"<br>");
 			}%> </td></tr>
