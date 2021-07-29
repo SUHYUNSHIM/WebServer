@@ -20,6 +20,7 @@ String id1 = request.getParameter("id1"); //객체.메소드. "id1"은 태그 이름이다. 
 //글상자이므로 문자로 넘어옴
 String pw1 = request.getParameter("pw1");
 String age1 = request.getParameter("age1");
+//http://url?id1=값 & pw1=값& age1 =값
 
 int b_year = Calendar.getInstance().get(Calendar.YEAR) - Integer.parseInt(age1)+1;
 %>

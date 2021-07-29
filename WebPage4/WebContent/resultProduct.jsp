@@ -10,13 +10,15 @@
 request.setCharacterEncoding("euc-kr"); //post의 한글처리방식
 response.setCharacterEncoding("euc-kr");
 
-//넘어오는 것은 value 값이다.
+//넘어오는 것은 value 값이다. request.getParamater--> 문자열, 넘긴 value 값 받기.
 String jong1 = request.getParameter("list"); //콤보박스는 하나만
 
-//여러개가 넘어오는 것은 어떻게?
+//여러개가 넘어오는 것은 어떻게? request.getParameterValues("")  --> values
+//체크한 것만 잡히는 유동적 배열
 String[] products = request.getParameterValues("choice");		
 
-String pay = request.getParameter("pay"); //라디오버튼 하나만
+//라디오버튼 하나만
+String pay = request.getParameter("pay");
 
 %>
 

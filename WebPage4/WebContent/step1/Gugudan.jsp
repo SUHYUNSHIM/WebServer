@@ -16,10 +16,9 @@
 </pre>
 <%
 	for(int i=1;i<=9;i++){
-		out.println("5 x"+i+"= "+5*i+"<br>");
-	}
-	
-%>
+		out.println("<h1>5"+"x"+i+"= "+5*i+"</h1>");%>
+			<br>
+	<%} %>
 
 </body>
 </html>
