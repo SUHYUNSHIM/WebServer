@@ -6,11 +6,15 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 </head>
-<body>
-문자형 숫자 * 숫자 <br>
-<%=Integer.parseInt("100")*200%><br>
+<body> <!--나는 impossible.jsp  -->
+${sessionScope.sirum }님!<br>
+환영합니다<br>
+<pre>
+<h2>
+짠! [Mission Impossible]
+짜잔 여기 정보가 있습니다
 
-${"100"*200}<br>
-${"100*200"}<br>
+</h2>
+</pre>
 </body>
 </html>
