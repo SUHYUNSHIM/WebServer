@@ -27,5 +27,9 @@
 		kaja="F";
 
 %>
+
+<%
+	request.getRequestDispatcher("/jspview/"+kaja+".jsp").forward(request,response);
+%>
 </body>
 </html>
