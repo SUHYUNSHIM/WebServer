@@ -14,9 +14,13 @@
 
 %>
 아하 id는 <%=vid1 %>이고 암호는 <%=vpw1 %>이군요<p>
+
+<!--session을 만들어서 다음 페이지에도 id/pw를 알게 한다.  -->
+
 <%
-session.setAttribute("sid1",vid1);
-session.setAttribute("spw1",vpw1);
+					/*name  value*/
+session.setAttribute("sid1",vid1); //브라우저 살아있는 동안
+session.setAttribute("spw1",vpw1); //브라우저 살아있는 동안
 %>
 가방 쇼핑은 <a href="bag.jsp">여기</a>를 누르세요<br>
 구두 쇼핑은 <a href="shoes.jsp">여기</a>를 누르세요<br>
