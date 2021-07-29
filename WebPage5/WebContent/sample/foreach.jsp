@@ -17,6 +17,9 @@
 	
 %>
 
-
+<h2>jstl+ EL Ω∫≈∏¿œ</h2>
+	<c:ForEach var="imsi" items="${sessionScope.kwail}">
+		${imsi }<br>
+	</c:ForEach>
 </body>
 </html>
