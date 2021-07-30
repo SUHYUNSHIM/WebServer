@@ -11,7 +11,6 @@
 </head>
 <body>
 <h1>사원 전체 명단</h1>
-
 <%
 	request.setCharacterEncoding("euc-kr"); //요청에 대한 한글 처리
 	TelInfoDAO tidao = new TelInfoDAO(); //객체 생성. 객체 생성하는 이유? 다른 곳에 있는 class를 사용하기 위해.
