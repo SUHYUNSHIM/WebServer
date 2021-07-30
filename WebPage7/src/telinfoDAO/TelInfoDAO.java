@@ -38,6 +38,10 @@ public class TelInfoDAO {
 
 			TelInfoVO tv = new TelInfoVO(id,name,tel,d);
 			tiarray.add(tv);
+			//이 작업의 결과는 db에 있는 사원 3명을 꺼내 resultset이라는 종이박스에 넣고
+			//이것을 하나씩 꺼내어 객체로 만든 다음
+			//arraylist <telinfovo> 라는 collection에 3명을 다 넣은 것이다. 
+			//즉, db에 있는 사원명단을 메모리로 복사한 개념이다.
 		}
 		return tiarray;
 		}
