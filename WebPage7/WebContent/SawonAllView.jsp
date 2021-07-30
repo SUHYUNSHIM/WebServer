@@ -39,7 +39,5 @@
 		<td><a href="SawonAllforDelete.jsp">[ªË¡¶]</a></td>
 	</tr>
 </table>
-
-
 </body>
 </html>
