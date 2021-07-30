@@ -14,7 +14,7 @@
 	
 	String kaja = null;
 	
-	///business logic을 jsp 가 담당.
+	///business logic을 jsp 가 담당.controller 역할
 	if(jum>=90)
 		kaja="A";
 	else if(jum>=80)
@@ -29,7 +29,7 @@
 %>
 
 <%
-	request.getRequestDispatcher("/jspview/"+kaja+".jsp").forward(request,response);
+	request.getRequestDispatcher("./jspview/"+kaja+".jsp").forward(request,response);
 %>
 </body>
 </html>
