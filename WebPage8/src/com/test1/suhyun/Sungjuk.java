@@ -35,7 +35,7 @@ public class Sungjuk extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		doGet(request, response); //마치 인자가 있는 2형식 호출문 같다.
 	}
 
 }
