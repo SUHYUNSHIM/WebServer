@@ -85,11 +85,33 @@ public class TelInfoDAO {
 		return tv;
 	}
 	
+	public boolean delete_nametel(String name2){
+		String sql = "delete from TelTable5 where name=?";/////
+		try{
+			pstmt=con.prepareStatement(sql);
+			pstmt.setString(1, name2);
+			pstmt.executeUpdate();
+		}catch(SQLException e){
+			System.out.println("delete Exception");
+			return false;
+		}
+		return true;
+	}
 	
+	public boolean update_nametel(String tel2,String name2) {
+		String sql = "update TelTable5 set tel=? where name=?";
+		try {
+			pstmt= con.prepareStatement(sql);
+			pstmt.setString(1, tel2);
+			pstmt.setString(2, name2);
+			pstmt.executeUpdate();
+		}catch(SQLException e) {
+			System.out.println("update Exception");
+			return false;
+		}
+		return true;
+	}
 	
-	
-	
-
 	
 	
 }
