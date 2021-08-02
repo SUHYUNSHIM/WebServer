@@ -1,6 +1,8 @@
-package com.test1.suhyun;
+package com.sj.suhyun;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +29,13 @@ public class Sungjuk extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+
+		response.setContentType("text/html; charset=EUC-KR"); //한글처리. 서버가 응답을 줄 때 한글이면 euc-kr로 한다.
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		PrintWriter out = response.getWriter(); //jsp 처럼 out으로 사용한다.
+		out.println("<h1>방가방가 서블릿</h1>");
 	}
 
 	/**
@@ -35,7 +43,7 @@ public class Sungjuk extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response); //마치 인자가 있는 2형식 호출문 같다.
+		doGet(request, response);
 	}
 
 }
