@@ -13,16 +13,16 @@ import javax.servlet.http.HttpServletResponse;
 import telinfoDAO.TelinfoDAO;
 
 /**
- * Servlet implementation class Telupdate
+ * Servlet implementation class Telinsert
  */
-@WebServlet("/Telupdate")
-public class Telupdate extends HttpServlet {
+@WebServlet("/Telinsert")
+public class Telinsert extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Telupdate() {
+    public Telinsert() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,41 +33,42 @@ public class Telupdate extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		request.setCharacterEncoding("euc-kr");
-		response.setCharacterEncoding("euc-kr");
-		
-		TelinfoDAO td1 = null;
-		
-		//전체 칼럼 수정이 가능, 그러므로 다 넘겨받음
-		int id = Integer.parseInt(request.getParameter("id"));
-		String name = request.getParameter("name");
-		String tel = request.getParameter("tel");
-		String d = request.getParameter("d");
-		
-		String name2 = request.getParameter("name2");
-		try {
-			td1 = new TelinfoDAO();
-		} catch (ClassNotFoundException | SQLException e) {			
-			e.printStackTrace();
-		}
-		
-		Boolean b = td1.update_nametel(id, name, tel, d, name2); //name2 조건에 한해서, 앞의 3개를 전달한다. update
-		if(b) {
-			request.setAttribute("result1", "수정good");
-		}else {
-			request.setAttribute("result1", "수정오류");
-		}
-		RequestDispatcher rd1 = request.getRequestDispatcher("result.jsp");
-		rd1.forward(request, response);
-		
+		doPost(request,response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		//doGet(request, response);
+		request.setCharacterEncoding("euc-kr");
+		response.setCharacterEncoding("euc-kr");
+
+		TelinfoDAO td1=null;
+		
+		try {
+			 td1=  new TelinfoDAO();
+		} catch (ClassNotFoundException | SQLException e) {			
+			e.printStackTrace();
+		}
+		
+
+		int id = Integer.parseInt(request.getParameter("id"));
+		String name=request.getParameter("name");
+		String tel=request.getParameter("tel");
+		String d =request.getParameter("d");
+		
+		boolean b = td1.insertInfo(id, name, tel, d);
+		
+		if(b)
+			//response.sendRedirect("getAllinfo.jsp");
+			request.setAttribute("result1","입력 good");
+		else {
+			request.setAttribute("result1", "입력오류");
+		}
+		RequestDispatcher rd1 = request.getRequestDispatcher("result.jsp"); //result.jsp로 갈 때 true, false를 가지고 간다.
+		rd1.forward(request, response);
 	}
 
 }

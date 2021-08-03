@@ -8,7 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 <!--input ºÎºĞ  -->
  <table border="1">
  <tr>
