@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>사원 전체 명단</h1>
+<h1>사원 전체 명단</h1> <!--시작화면  -->
 <%
 	request.setCharacterEncoding("euc-kr"); //postt
 	TelInfoDAO tidao = new TelInfoDAO(); //객체 생성

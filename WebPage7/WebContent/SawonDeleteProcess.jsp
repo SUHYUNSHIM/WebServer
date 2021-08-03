@@ -16,9 +16,9 @@ TelInfoDAO tidao = new TelInfoDAO();
 String name = request.getParameter("name");
 
 
-boolean b1 = tidao.delete_nametel(name);
+boolean b1 = tidao.delete_nametel(name); //삭제 작업 수행.
 if(b1)
-	response.sendRedirect("SawonAllView.jsp");
+	response.sendRedirect("SawonAllView.jsp"); //삭제 완료시 전체 사원 화면으로 돌아간다.
 
 else{%>
 <a href="SawonDeleteForm.jsp">사원삭제 에러 - 삭제화면으로</a>

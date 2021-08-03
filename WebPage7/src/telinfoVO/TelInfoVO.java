@@ -2,13 +2,13 @@ package telinfoVO;
 
 import java.util.Date;//자바의 Date
 
-public class TelInfoVO {
+public class TelInfoVO { //클래스명 main x. 설계도, 필드정의.
 	private int id;
 	private String name;
 	private String tel;
 	private Date d;
 	
-	public TelInfoVO() { }
+	public TelInfoVO() {} 
 	
 	public TelInfoVO(int id, String name, String tel, Date d) {
 		this.id = id;
