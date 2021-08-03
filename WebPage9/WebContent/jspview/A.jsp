@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!--el로 출력  -->
 <h1>${param.irum }님의 점수는 ${param.jum }점 이군요!</h1>
 <h1>그러니까 ${param.irum }님은 A학점이지요~</h1>
 
