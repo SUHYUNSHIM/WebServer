@@ -13,7 +13,7 @@
 	String bang="d:/upbang";
 	MultipartRequest mr1 = new MultipartRequest(request,bang,10*1024*1024,"euc-kr",new DefaultFileRenamePolicy());
 	
-	String virum1 = mr1.getParameter("irum1");
+	String virum1 = mr1.getParameter("irum1"); //request를 getParameter로 받았다.
 	
 	out.println("사용자 이름은"+virum1+"이시구요"+"<br>");
 	out.println("축하축하~ 파일 올리기 성공했네요 ");

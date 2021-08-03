@@ -3,6 +3,8 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+
+<!--media를 이용해서 가로로 같은 비율로 이미지가 나타나도록. 모바일의 경우 하나씩 네 줄, 태블릿은 두개씩 두 줄, 컴퓨터는 가로로 네개   -->
 <style>
 * {margin:0; padding: 0;}
 @media all and (min-width:320px){ /*mobile*/
@@ -31,7 +33,7 @@ div {font-size:0;}
 
 <!-- <form method="post" action="grade.jsp"> 처음에는 이것으로  -->
 <form method="post" action="grade2.jsp">
-이름 <input type="text" name="irum"><br>
+이름 <input type="text" name="irum"><br>  <!--String irum = request.getParameter("irum");으로 받는다.  -->
 점수입력<input type="text" name="jum"><br>
 <input type= "submit" value="가자 서버로">
 <input type="reset" value="취소">
