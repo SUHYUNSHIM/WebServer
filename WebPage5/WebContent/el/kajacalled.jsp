@@ -8,13 +8,12 @@
 </head>
 <body>
 <%
+	//action, post로 전달받은 것
 	String name = request.getParameter("irum");
 	String kor = request.getParameter("kor");
 	String eng = request.getParameter("eng");
-	
-	
+
 	int total = Integer.parseInt(kor)+ Integer.parseInt(eng);	
-	
 %>
 
 <%="이름은 " +name %>

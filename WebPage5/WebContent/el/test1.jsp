@@ -21,7 +21,7 @@ ${"e1"}은 참 간단해서 좋지만 공부는 해야해<br>
 ${"다음 e1의 답은 뭘까" }<br>
 
 ${100} ${100+200} ${100 >2} ${200.35} ${10%3}<br>
-${false} ${empty kab2} ${empty ""} ${empty "a"} ${null} 
+${false} ${empty kab2} ${empty ""} ${empty "a"} ${null}  <!--null은 무시한다.  -->
 	등의 표현이 가능해<br> 
 </body>
 </html>

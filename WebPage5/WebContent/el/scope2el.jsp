@@ -8,9 +8,7 @@
 <title></title>
 </head>
 <body>
-   
  
-
  ${ pageScope.page1 }<br> 
  ${ requestScope.req1 }<br> 
  ${ sessionScope.ses1 }<br> 
