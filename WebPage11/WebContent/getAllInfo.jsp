@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,8 +21,6 @@
 
 	<!--   우선 컨트롤러에서 파일 명을 처리할때 .do를 붙이자    +  총지배인(front controller) 
 	    .bo ....                                                   -->
-
-	
 	<!-- 서블릿으로 갔다가 business logic을 처리한 다음 다시 출발한 곳으로 온다 -->
 	<!-- 아래는 되돌아와서 출력하기 위한 부분 -->
 	<tr>
@@ -43,7 +40,6 @@
 		<td>${vo1.d}</td>
 	</tr>
 	</c:forEach>
-
 	<table border=0>
 	<tr>           <!--   입력은 여기서  -그렇다면 수정은 어디서 ??????
 	                           해답은 36번줄 따라가보자 -->
@@ -54,11 +50,8 @@
 		     <!-- 진행상황확인해보면
 		       모두보기-입력이 짝
 		       --수정을 시작하여 삭제하고 짝  -->
-		       
 	</tr>
 	</table>
 </table>
-
-
 </body>
 </html>
