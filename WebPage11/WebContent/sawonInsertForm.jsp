@@ -35,6 +35,5 @@
 	<input type="reset" value="다시작성">
 	<a href="getAllInfo.jsp"><input type="button" value="모두보기"></a>
 </form>
-
 </body>
 </html>
