@@ -27,6 +27,8 @@ public class Sungjuk extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    //메소드 정의문 2형식.
+    //서블릿은 내장객체가 아니므로 클래스명 객체명 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -41,9 +43,11 @@ public class Sungjuk extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	//2형식 메소드
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		//요청 정보, 응답 정보를 그대로 전달한다. 둘을 같이 가지고 가므로 안심이 된다.
 	}
 
 }
