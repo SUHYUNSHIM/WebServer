@@ -99,7 +99,41 @@ public class SawonFrontController extends HttpServlet {
 				request.setAttribute("stv", tv1); //한 사람 객체 정보를 다른 페이지로 넘기기 위해 저장.
 				str = "sawonUpdateForm.jsp";
 				break;
-		
+				
+			case "/sawonUpdate.do":
+				TelInfoDAO tidao4 =null;
+				TelInfoVO tv2 = null;
+				int id2 = Integer.parseInt(request.getParameter("id"));
+				String name2 = request.getParameter("name");
+				String tel2 = request.getParameter("tel");
+				String d2 = request.getParameter("d");
+				
+				String sname = request.getParameter("sname");
+				try {
+					tidao4 = new TelInfoDAO();
+				}catch(ClassNotFoundException | SQLException e) {
+					e.printStackTrace();
+				}
+				tidao4.update_all(id2, name2, tel2, d2, sname);
+				//전부 update하는 메소드
+				
+				str="getAllInfo.jsp";
+				break;
+				
+			case "/sawonDelete.do":
+				TelInfoDAO tidao5 = null;
+				TelInfoVO tv3 = null;
+				String name3 = request.getParameter("name");
+				
+				try {
+					tidao5 = new TelInfoDAO();					
+				}catch(ClassNotFoundException | SQLException e) {
+					e.printStackTrace();
+				}
+				tidao5.delete_name(name3);
+				str = "getAllInfo.jsp";
+				break;
+				
 		} ////switch 끝
 		RequestDispatcher rd1 = request.getRequestDispatcher(str);
 		rd1.forward(request, response);

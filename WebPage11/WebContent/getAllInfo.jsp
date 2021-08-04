@@ -1,56 +1,56 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ì‚¬ì› ì „ì²´ ë³´ê¸° (getAllInfo.jsp) </title>
+<title>»ç¿ø ÀüÃ¼ º¸±â (getAllInfo.jsp) </title>
 </head>
-<body>  <!--  ë‚˜ëŠ” getAllInfo.jsp -->
-<h1>ì‚¬ì› ì „ì²´ ë³´ê¸°</h1>
+<body>  <!--  ³ª´Â getAllInfo.jsp -->
+<h1>»ç¿ø ÀüÃ¼ º¸±â</h1>
 <hr><br>
 <table border=1>
 	<tr>
 		<td colspan=4>
 		<form action="getAllInfo.do">	<!-- .do -->	<!-- <form action="Telallview" method="post"> -->
-			<input type="submit" value="ëª¨ë‘ë³´ê¸°">
+			<input type="submit" value="¸ðµÎº¸±â">
 		</form>
 		</td>
 	</tr>
 
-	<!--   ìš°ì„  ì»¨íŠ¸ë¡¤ëŸ¬ì—ì„œ íŒŒì¼ ëª…ì„ ì²˜ë¦¬í• ë•Œ .doë¥¼ ë¶™ì´ìž    +  ì´ì§€ë°°ì¸(front controller) 
+	<!--   ¿ì¼± ÄÁÆ®·Ñ·¯¿¡¼­ ÆÄÀÏ ¸íÀ» Ã³¸®ÇÒ¶§ .do¸¦ ºÙÀÌÀÚ    +  ÃÑÁö¹èÀÎ(front controller) 
 	    .bo ....                                                   -->
-	<!-- ì„œë¸”ë¦¿ìœ¼ë¡œ ê°”ë‹¤ê°€ business logicì„ ì²˜ë¦¬í•œ ë‹¤ìŒ ë‹¤ì‹œ ì¶œë°œí•œ ê³³ìœ¼ë¡œ ì˜¨ë‹¤ -->
-	<!-- ì•„ëž˜ëŠ” ë˜ëŒì•„ì™€ì„œ ì¶œë ¥í•˜ê¸° ìœ„í•œ ë¶€ë¶„ -->
+	<!-- ¼­ºí¸´À¸·Î °¬´Ù°¡ business logicÀ» Ã³¸®ÇÑ ´ÙÀ½ ´Ù½Ã Ãâ¹ßÇÑ °÷À¸·Î ¿Â´Ù -->
+	<!-- ¾Æ·¡´Â µÇµ¹¾Æ¿Í¼­ Ãâ·ÂÇÏ±â À§ÇÑ ºÎºÐ -->
 	<tr>
-		<td>ì‚¬ë²ˆ</td>
-		<td>ì´ë¦„</td>
-		<td>ì „í™”ë²ˆí˜¸</td>
-		<td>ìž…ì‚¬ì¼</td>
+		<td>»ç¹ø</td>
+		<td>ÀÌ¸§</td>
+		<td>ÀüÈ­¹øÈ£</td>
+		<td>ÀÔ»çÀÏ</td>
 	</tr>
-	<!-- javaì˜ forì™€ ê°™ìŒ -->
-	<c:forEach var="vo1" items="${alist1}">		<!-- request scopeì— ê°ì²´ì „ì²´ë¥¼ ArrayList alist1ì— ì €ìž¥ -->
+	<!-- javaÀÇ for¿Í °°À½ -->
+	<c:forEach var="vo1" items="${alist1}">		<!-- request scope¿¡ °´Ã¼ÀüÃ¼¸¦ ArrayList alist1¿¡ ÀúÀå -->
 	<tr>	
 		<td>${vo1.id}</td>
 		
-		      <!-- ìˆ˜ì •ì„ ì‹œìž‘í•˜ê¸°ìœ„í•œ ë‹¨ê³„  ,ì—¬ê¸°ì„œ ìˆ˜ì •ê³¼ ì‚­ì œ ê°€ ì§  -->
-		<td><a href="sawonSearchOne.do?name=${vo1.name}"> ${vo1.name} </a></td>	<!-- ì „ì²´ë³´ê¸° í•˜ë©´ì„œ ìˆ˜ì •ë„ ê°€ëŠ¥í•˜ê²Œ í•˜ìž -->
+		      <!-- ¼öÁ¤À» ½ÃÀÛÇÏ±âÀ§ÇÑ ´Ü°è  ,¿©±â¼­ ¼öÁ¤°ú »èÁ¦ °¡ Â¦  -->
+		<td><a href="sawonSearchOne.do?name=${vo1.name}"> ${vo1.name} </a></td>	<!-- ÀüÃ¼º¸±â ÇÏ¸é¼­ ¼öÁ¤µµ °¡´ÉÇÏ°Ô ÇÏÀÚ -->
 		<td>${vo1.tel}</td>
 		<td>${vo1.d}</td>
 	</tr>
 	</c:forEach>
 	
 	<table border=0>
-	<tr>           <!--   ìž…ë ¥ì€ ì—¬ê¸°ì„œ  -ê·¸ë ‡ë‹¤ë©´ ìˆ˜ì •ì€ ì–´ë””ì„œ ??????
-	                           í•´ë‹µì€ 36ë²ˆì¤„ ë”°ë¼ê°€ë³´ìž -->
-		<td><a href="sawonInsertForm.jsp">[ìž…ë ¥]</a></td>
-		<td><a href="getAllInfo.jsp">[ëª¨ë‘ë³´ê¸°]</a></td>
-		      <!-- ëª¨ë‘ë³´ê¸° ì „ì²´ì¶œë ¥ì€ ì§€ê¸ˆ ì†ŒìŠ¤ìžì²´ ì¦‰, ëª¨ë‘ë³´ê¸°ì™€ ìž…ë ¥ì´ ì§   -->
-		     <!--  ì´ë ‡ê²Œ ì§„í–‰í•˜ë©´ crud ì™„ì„± --> 
-		     <!-- ì§„í–‰ìƒí™©í™•ì¸í•´ë³´ë©´
-		       ëª¨ë‘ë³´ê¸°-ìž…ë ¥ì´ ì§
-		       --ìˆ˜ì •ì„ ì‹œìž‘í•˜ì—¬ ì‚­ì œí•˜ê³  ì§  -->
+	<tr>           <!--   ÀÔ·ÂÀº ¿©±â¼­  -±×·¸´Ù¸é ¼öÁ¤Àº ¾îµð¼­ ??????
+	                           ÇØ´äÀº 36¹øÁÙ µû¶ó°¡º¸ÀÚ -->
+		<td><a href="sawonInsertForm.jsp">[ÀÔ·Â]</a></td>
+		<td><a href="getAllInfo.jsp">[¸ðµÎº¸±â]</a></td>
+		      <!-- ¸ðµÎº¸±â ÀüÃ¼Ãâ·ÂÀº Áö±Ý ¼Ò½ºÀÚÃ¼ Áï, ¸ðµÎº¸±â¿Í ÀÔ·ÂÀÌ Â¦   -->
+		     <!--  ÀÌ·¸°Ô ÁøÇàÇÏ¸é crud ¿Ï¼º --> 
+		     <!-- ÁøÇà»óÈ²È®ÀÎÇØº¸¸é
+		       ¸ðµÎº¸±â-ÀÔ·ÂÀÌ Â¦
+		       --¼öÁ¤À» ½ÃÀÛÇÏ¿© »èÁ¦ÇÏ°í Â¦  -->
 	</tr>
 	</table>
 </table>

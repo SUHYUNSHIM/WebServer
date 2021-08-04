@@ -123,8 +123,6 @@ public class TelInfoDAO {
 	}
 	
 	
-	
-	
 	public TelInfoVO getInfo(String oriName)			
 			throws SQLException{
 	TelInfoVO tv=null;
