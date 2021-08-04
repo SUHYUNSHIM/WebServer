@@ -102,7 +102,7 @@ public class TelInfoDAO {
 		String sql = "update TelTable5 set tel=? where name=?";
 		try {
 			pstmt= con.prepareStatement(sql);
-			pstmt.setString(1, tel2);
+			pstmt.setString(1, tel2); //?¿¡ ¹èÄ¡.
 			pstmt.setString(2, name2);
 			pstmt.executeUpdate();
 		}catch(SQLException e) {

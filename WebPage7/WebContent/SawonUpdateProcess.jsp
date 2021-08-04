@@ -14,6 +14,7 @@ request.setCharacterEncoding("euc-kr");
 TelInfoDAO tidao = new TelInfoDAO();
 
 //int id= Integer.parseInt(request.gettParamether("id"));
+/*이름과 전화번호만 넘겨받았다.  */
 String name = request.getParameter("name");
 String tel = request.getParameter("tel");
 //수정 처리를 위해 form으로 부터 수정대상자 이름과 변경될 전화번호를 넘겨받는다
