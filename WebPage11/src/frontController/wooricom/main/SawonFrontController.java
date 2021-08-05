@@ -42,8 +42,11 @@ public class SawonFrontController extends HttpServlet {
 		System.out.println(request.getRequestURI()); // 프로젝트명/현재 /do의 파일 이름  ---> /WebPage11/getAllInfo.do 
 		System.out.println(request.getContextPath()); //프로젝트명
 		String c = request.getRequestURI().substring(request.getContextPath().length()); // /getAllInfo.do 가  된다.
-		//substring 자바 문법. 근데 위는 인자가 한 개 있는 형태이다.
+		//substring 자바 문법. 근데 위는 인자가 한 개 있는 형태이다. 보통 substring(인자1,인자2)로 쓴다. substring(0,1)은 0번째 인덱스부터 첫째글자까지.
+		//왼쪽인자는 0부터 시작, 오른쪽 인자는 같은 글자를 1부터 센다. 그런데 인자가 한 개이면 그 하나인 인자는 시작점을 의미하고, 문자열의 시작점부터 끝까지 가져오는 것이다. 
+		//결과는 /getAllInfo.do, /sawonInsertForm.do, /sawonSearchOne.do, /sawonUpdate.do, /sawonDelete.do
 		
+		//c를 기준으로 아래의 switch case 별로 작동하게 된다.
 		String str = null;
 		switch(c) {
 			case "/getAllInfo.do":
@@ -53,14 +56,15 @@ public class SawonFrontController extends HttpServlet {
 				}catch(ClassNotFoundException | SQLException e) {
 					e.printStackTrace();
 				}
-				ArrayList<TelInfoVO> alist1 = null;
+				ArrayList<TelInfoVO> alist1 = null; //DB에 있는 것을 객체로 만들어서 collection에 저장한다.
 				try {
 					alist1 = tidao1.getAllInfo(); //전체 내용 출력. 객체로 넘어온다.
 				}catch(SQLException e) {
 					e.printStackTrace();
 				}
-				request.setAttribute("alist1", alist1);
+				request.setAttribute("alist1", alist1); //alist1이라는 기억창고에 alist1 collection의 것을 저장한다. request를 통해 넘긴다.
 				str ="getAllInfo.jsp";
+				//System.out.println(alist1.get(0).getName());
 				break;
 				
 			case "/sawonInsertForm.do":
@@ -76,12 +80,12 @@ public class SawonFrontController extends HttpServlet {
 				} catch(ClassNotFoundException | SQLException e) {
 					e.printStackTrace();
 				}
-				tidao2.insert_nametel(sabun1,name1,tel1,date1);
+				tidao2.insert_nametel(sabun1,name1,tel1,date1); //여기서 dao의 insert 메서드를 호출한다. 즉 계산 작업을 수행하는 controller.
 				str= "getAllInfo.jsp";
 				
 				break;
 			
-			case "/sawonSearchOne.do":
+			case "/sawonSearchOne.do": //한 사람 출력
 				TelInfoDAO tidao3 = null;
 				TelInfoVO tv1 = null;
 				try {
@@ -91,7 +95,7 @@ public class SawonFrontController extends HttpServlet {
 				}
 				String name = request.getParameter("name");
 				try {
-					tv1 = tidao3.getInfo(name); //한사람 출력. 홍길동을 dao에서 찾아서 가져온다.
+					tv1 = tidao3.getInfo(name); //한사람 출력 메서드. 홍길동을 dao에서 찾아서 가져온다. getAllInfo는 전제출력
 				}catch(SQLException e){
 					e.printStackTrace();
 				}
@@ -135,8 +139,8 @@ public class SawonFrontController extends HttpServlet {
 				break;
 				
 		} ////switch 끝
-		RequestDispatcher rd1 = request.getRequestDispatcher(str);
-		rd1.forward(request, response);
+		RequestDispatcher rd1 = request.getRequestDispatcher(str); //request setting 후 목적지에 전달.
+		rd1.forward(request, response); //값이 날라가지 않도록, forward를 통해 request의 값을 넘길 수 있다.
 		
 	
 		
