@@ -4,6 +4,6 @@
 오늘도 즐거운 날이야
 열심히 살아가자 오늘도
 
-<% String name = request.getParameter("name");%>
+<% String name = request.getParameter("name");%> <!--suhyun이라는 이름을 받아서  -->
 
 그리고 당신의 이름은 <%= name %>이군요
