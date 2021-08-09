@@ -7,20 +7,20 @@
 <script>
 function kaja(){
 	$.ajax({
-		url:"kaja.jsp",
-		data:{            //json
-			irum: "hong",
-			na2 :35			
+		url:"kaja.jsp",   //url:"hello.jsp", open(method,url,async)
+		data:{            //json(javascript object notation)
+			irum: "hong", //open,send, name:value
+			na2 :35			//kaja.jsp?irum=hong&na2=35
 		},
-		dataType :"text",
+		dataType :"text", //responseText, responseXML
 		type:"get",
-		success : function(result1){ //json 아무 인자나 넣는다.
+		success : function(result1){ //json 아무 인자나 넣는다. 어떤 것인지 특정하지 않지만,반드시 넣어줘야 하는 아무 인자.!
 			alert("응답받는 다" +result1);
 		},
 		error:function(xhr1,status){
 			alert("에러상태 : "+"\t"+xhr1.status);
 		}
-	});
+	}); //$.ajax end
 }//kaja()-end
 </script>
 
