@@ -21,10 +21,12 @@
 		<li>나코</li>
 	</ul>
 	</div>	
-<script>
-	alert($("#hansik li:eq(2)").text());
-	alert($("ol li:eq(1)").text());
-	alert($(".hansik li:eq(1)").text());
+<script>									//id가 # class가 .
+	alert($("#hansik li:eq(2)").text()); //document.getElementById("hansik").. innerText. innerHTML	
+										//hansik이라는 id를 참조하여 <li>중  2호 요소의 문자열. 								 
+	alert($("ol li:eq(1)").text()); //ol 요소의 하위요소인 li를 찾아 1호 요소 문자열.
+	alert($(".hansik li:eq(1)").text()); //hansik class를 참조하여 <li>중 1호 요소 문자열.
+	//육개장, 김찌, 김찌 출력
 </script>
 </body>
 </html>
