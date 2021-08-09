@@ -18,7 +18,7 @@ $(function(){
 	//setInterval(arg1.3000) 계속 반복
 	/* setInterval(function(){
 		$("img").first().appendTo("body");		
-		},3000); //3초 간격
+		},3000); //3초 간격. dom에서 동적 생성.
 	 */
 	 setInterval(function(){
 		 /* $("<img>")
@@ -28,7 +28,7 @@ $(function(){
 		 //
 		 .attr("id","foxfox").appendTo("body"); */
 		 
-		 $("img:first").remove();
+		 $("img:first").remove(); //첫번째 그림을 삭제 
 	 },3000);
 	});
 	

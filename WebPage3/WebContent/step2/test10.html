@@ -18,12 +18,13 @@
 
 <script>
 	$(function (){
-		$('h1').css('color','orange');
-		$('h1#hana').css('color','pink');
-		$("h3").css('color','magenta');
-		$('#saek').css('color','green');
-		$('.kongjoo').css('color','red');
-		$('div.aa').css('color','blue')
+		$("h1").css('color','orange'); //모든 h1 태그
+		$("h1#hana").css('color','pink'); //h1 태그 중 id가 hana인 것을 검색한다.
+		$("h3").css('color','magenta'); //"태그명"
+		$("#saek").css('color','green'); //"아이디명"
+		$(".kongjoo").css('color','red'); //클래스명
+		$("div.aa").css('color','blue') //div 태그 중 해당 클래스명 // '' "" 상관없음.
+		//위의 경우는 html 실행과 동시에 그냥 적용됨. body니까.
 		
 	});
 </script>	

@@ -3,7 +3,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-<script src="js/jquery-3.3.1.js"></script>m
+<script src="js/jquery-3.3.1.js"></script>
 </head>
 <body>
 	<h1>맛집메뉴</h1>
@@ -35,6 +35,25 @@
 			$(this).css('color','blue');
 		});
 	});
+	
+	//가장 기본적인 방법으로 한다면 이런 스타일로 전부 하나씩 적용
+	// $("div").find("#22").text("두부전"); //setText();
+	//$("div").find("#100").html("<h3>회냉면</h3>").css('color','red'); --> setHTML, chaining 기법
+	
+	//프로그램 작성으로
+	 /* $(function(){
+		$("li").css("color","blue");
+	}); */
+	//프로그램 작성, each로 하면!
+	/* $(function(){			//인자1 증가, 인자2
+		$("li").each(function(index1,content2){
+			$(this).css('color','blue');
+			//alert(index1) --> 0,1,2... 이렇게 증가.
+		});
+	}); */
+	
 	</script>
+	
+	
 </body>
 </html>

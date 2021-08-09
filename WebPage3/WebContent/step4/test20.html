@@ -5,17 +5,17 @@
 <title>Insert title here</title>
 <script src="js/jquery-3.3.1.js"></script>
 <script>
-	$(function(){
+	$(function(){ //toggle
 		var soo=[1,2,3,4]; // index 0,1,2 --> value 1,2,3,4 
 		$.each(soo,function(index,value){ //for(var imsi in... )
 			$('#title'+value).click(function(){
-				if($('#stitle'+value).is(':hidden'))
-					$('#stitle'+value).show();
+				if($('#stitle'+value).is(':hidden')) //hide 상태냐?
+					$('#stitle'+value).show(); //보여줘
 				else //show 상태면
-					$('#stitle'+value).hide();
-			});				
-		});	
-	});
+					$('#stitle'+value).hide(); //숨겨
+			});	//click-end			
+		});	//function-each end
+	});//$(function) end
 </script>
 </head>
 <body>
