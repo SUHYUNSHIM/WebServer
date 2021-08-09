@@ -20,6 +20,7 @@ html에 자바를 끼워 넣고 있는 중  <br>
 	out.println(request.getRequestURI()+"로 요청한  URI구만"+"<br>");
 	//jsp 내장 객체: out, request, response, page, session, application, exception, config,pageContext
 	//그 중에서 request는 요청 담당 내장 객체이다.
+	//WebPage4//HelloWorld.jsp로 요청한 URI구만
 %>
 
 </body>

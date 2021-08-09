@@ -21,6 +21,6 @@
 [e1]<br>
 이름 ${param.name}<br> <!--현재 이름이 출력 잘 안되는 상황.  -->
 총점 ${param.kor+ param.eng}<br>
-<!--param = request.getParameter();  -->
+<!--param = request.getParameter();  정수변환 하지 않아도 저절로 정수로 생각하여 계산, 결과값을 보여준다.-->
 </body>
 </html>
